@@ -43,7 +43,12 @@ public ArrayList<Class<? extends Library>> libs = new ArrayList<>(Arrays.asList(
 ));
 
 // dreambot.guis.AntiBan
-public class AntiBan extends JFrame { ... }
+public class AntiBan extends JFrame {
+    public void start() {
+        pack();
+        setVisible(true);
+    }
+}
 
 // dreambot.libs.AntiBan
 public class AntiBan extends Library {
