@@ -78,7 +78,7 @@ dreambot.libs.AntiBan lib = (dreambot.libs.AntiBan) getProvider().getLibInstance
 ```
 
 # Copyright and License
-Copyright (C) <2019>  <Kye-T>
+Copyright (C) <2019>  < Kye-T >
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
