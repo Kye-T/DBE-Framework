@@ -12,6 +12,8 @@ import javax.swing.GroupLayout;
 /**
  * Copyright (C) <2019>  <Kye-T>
  * See dtohh.main.Script for GNU license.
+ *
+ * Example GUI
  */
 
 public class Welcome extends JFrame {
