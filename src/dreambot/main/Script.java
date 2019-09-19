@@ -22,7 +22,7 @@ import org.dreambot.api.methods.Calculations;
  */
 
 public class Script extends Provider {
-
+ 
     public Script(Main provider) {
         super(provider);
     }

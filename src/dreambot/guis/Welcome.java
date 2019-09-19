@@ -53,16 +53,16 @@ public class Welcome extends JFrame {
         contentPaneLayout.setHorizontalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
-                    .addGap(151, 151, 151)
-                    .addComponent(button1)
-                    .addContainerGap(155, Short.MAX_VALUE))
+                    .addGap(148, 148, 148)
+                    .addComponent(button1, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(150, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(GroupLayout.Alignment.TRAILING, contentPaneLayout.createSequentialGroup()
-                    .addContainerGap(118, Short.MAX_VALUE)
-                    .addComponent(button1)
-                    .addGap(113, 113, 113))
+                    .addContainerGap(109, Short.MAX_VALUE)
+                    .addComponent(button1, GroupLayout.PREFERRED_SIZE, 53, GroupLayout.PREFERRED_SIZE)
+                    .addGap(99, 99, 99))
         );
         pack();
         setLocationRelativeTo(getOwner());
