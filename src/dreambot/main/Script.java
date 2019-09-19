@@ -2,6 +2,8 @@ package dreambot.main;
 
 import dreambot.libs.AntiBan;
 import org.dreambot.api.methods.Calculations;
+import org.dreambot.api.script.Category;
+import org.dreambot.api.script.ScriptManifest;
 
 /**
  *
@@ -20,9 +22,16 @@ import org.dreambot.api.methods.Calculations;
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
+@ScriptManifest(
+        author = "Dtohh",
+        name = "DBE Framework",
+        description = "Edit me and enjoy coding!",
+        version = 1.1,
+        category = Category.CONSTRUCTION
+)
 
 public class Script extends Provider {
- 
+
     public Script(Main provider) {
         super(provider);
     }
