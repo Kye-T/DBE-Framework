@@ -1,6 +1,11 @@
 # DBE-Framework
 DreamBot Easy Framework - Scripting, made simple and effective.
 
+# Required Libraries To Run Demo
+If you do not want to purchase JFormDesigner, you can remove the GUI's and the `syncronized` wait in the `dreambot.main.Main` for the welcome GUI to be started.
+
+- JFormDesigner
+
 # Installation
 - Clone via VCS in your Intellij IDEA IDE
 - Navigate to `File > Project Structure > Libraries` and add the `client.jar` from your DreamBot folder (BotData)
