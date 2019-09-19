@@ -31,7 +31,6 @@ public class Script extends Provider {
     public void onStart() {
         // Example on how to load your libs and get access to your GUI
         dreambot.guis.AntiBan antiBan = ((AntiBan) getProvider().getLibInstance(AntiBan.class)).getGui();
-        antiBan.start();
     }
 
     @Override
