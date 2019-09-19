@@ -1,2 +1,2 @@
-# potential-fiesta
+# DBE-Framework
 DreamBot Easy Framework
