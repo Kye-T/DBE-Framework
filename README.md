@@ -35,38 +35,52 @@ public class AntiBan extends Library {
 
 # Adding and retreiving a GUI
 You can add graphical user interfaces simply with DBE. Simply create a GUI then use a dependency library to instance it.
+Start off by creating a GUI:
 
 ```java
-// dreambot.main.Main
-public ArrayList<Class<? extends Library>> libs = new ArrayList<>(Arrays.asList(
-    AntiBan.class,
-));
-
-// dreambot.guis.AntiBan
 public class AntiBan extends JFrame {
+    private Script api;
+    
+    public AntiBan(Reference<Script> instance) {
+        /**
+         * The API shares the same zval since it was passed by reference
+         * thus can be re-used as it was the Script.
+         */
+        this.api = instance;
+    }
+    
     public void start() {
         pack();
         setVisible(true);
     }
 }
+```
 
-// dreambot.libs.AntiBan
+You can then create a Library as a middleman for the GUI.
+
+```java
 public class AntiBan extends Library {
     private dreambot.guis.AntiBan gui;
 
     public AntiBan() {
-        gui = new dreambot.guis.AntiBan().setProvider(getProvider()).start();
+        /**
+         * getProvider() will get the API in any Library
+         */
+        gui = new dreambot.guis.AntiBan(getProvider()).start();
     }
 
     public dreambot.guis.AntiBan getGui() {
         return gui;
     }
 }
+```
 
-// dreambot.main.Script
+Inside of your main script, you can now start and get the gui through your library using the `getLibInstance()` method by passing the class in.
+
+```java
 @Override
 public void onLoop {
-    dreambot.guis.AntiBan antiBan = ((AntiBan) getProvider().getLibInstance(AntiBan.class)).getGui();
+    dreambot.guis.AntiBan antiBan = getProvider().getLibInstance(AntiBan.class).getGui();
     return 0;
 }
 ```
@@ -74,7 +88,7 @@ public void onLoop {
 You can get any dependency provider via using the `getProvider().getLibInstance()` method
 
 ```java
-dreambot.libs.AntiBan lib = (dreambot.libs.AntiBan) getProvider().getLibInstance(dreambot.libs.AntiBan.class);
+dreambot.libs.AntiBan lib = getProvider().getLibInstance(dreambot.libs.AntiBan.class);
 ```
 
 # Copyright and License
