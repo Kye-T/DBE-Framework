@@ -16,9 +16,9 @@ import java.util.Optional;
 public class Main {
     public static Provider script;
 
-    public ArrayList<Class<? extends Library>> libs = new ArrayList<>(
-            Arrays.asList(AntiBan.class)
-    );
+    public ArrayList<Class<? extends Library>> libs = new ArrayList<>(Arrays.asList(
+        // TODO("Add your created libraries")
+    ));
 
     public ArrayList<Library> libInstances = new ArrayList<>();
 
@@ -45,9 +45,9 @@ public class Main {
      * @return Library
      */
 
-    public Library getLibInstance(Class<? extends Library> lib) {
+    public <Library> Library getLibInstance(Class<? extends Library> lib) {
         Optional<Object> library;
-        return (library = Arrays.stream(libInstances.toArray()).filter(o -> o.getClass() == lib).findFirst()).isPresent() ? (Library) library.get() : null;
+        return (library = Arrays.stream(libInstances.toArray()).filter(o -> o.getClass() == lib).findFirst()).isPresent() ? lib.cast(library.get()) : null;
     }
 
     /**
